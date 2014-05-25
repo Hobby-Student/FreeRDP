@@ -35,6 +35,7 @@ struct xf_FullscreenMonitors
 	UINT32 left;
 	UINT32 right;
 };
+typedef struct xf_FullscreenMonitors xfFullscreenMonitors;
 
 struct xf_WorkArea
 {
