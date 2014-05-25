@@ -28,6 +28,14 @@ typedef struct xf_context xfContext;
 #include "xf_monitor.h"
 #include "xf_channels.h"
 
+struct xf_FullscreenMonitors
+{
+	UINT32 top;
+	UINT32 bottom;
+	UINT32 left;
+	UINT32 right;
+};
+
 struct xf_WorkArea
 {
 	UINT32 x;
@@ -87,6 +95,7 @@ struct xf_context
 	int scanline_pad;
 	BOOL big_endian;
 	BOOL fullscreen;
+	xfFullscreenMonitors fullscreenMonitors;
 	BOOL grab_keyboard;
 	BOOL unobscured;
 	BOOL debug;
@@ -149,6 +158,7 @@ struct xf_context
 
 	Atom _NET_WM_STATE;
 	Atom _NET_WM_STATE_FULLSCREEN;
+	Atom _NET_WM_FULLSCREEN_MONITORS;
 	Atom _NET_WM_STATE_SKIP_TASKBAR;
 	Atom _NET_WM_STATE_SKIP_PAGER;
 
